@@ -16,7 +16,8 @@ class MSquaredServer(LabradServer):
 
         LabradServer.__init__(self)
 
-    def load_config(self, path):
+    @staticmethod
+    def load_config(path):
         if (not os.path.isfile(path)):
             raise Exception('MSquaredServer: Could not find configuration (%s).', config_path)
 
