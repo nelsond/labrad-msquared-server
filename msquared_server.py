@@ -135,7 +135,7 @@ class MSquaredServer(LabradServer):
         minimum, maximum = rng
 
         if (arg > maximum or arg < minimum):
-            raise ValueError('Value must be between 0 and 100')
+            raise ValueError('Value must be between %s and %s' % (minimum, maximum))
 
 if __name__ == '__main__':
     from labrad import util
